@@ -50,7 +50,9 @@
 .short-strong {
   color: #000;
 }
-
+.particular-news {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
 .newpage-container {
   display: flex;
 }
@@ -58,7 +60,6 @@
   margin-left: 10px;
   margin-top: 150px;
   min-width: 50%;
-  border: 1px solid green;
 }
 .news-content-div {
   display: flex;
