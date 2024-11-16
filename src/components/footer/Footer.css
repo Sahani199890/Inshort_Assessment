@@ -3,3 +3,27 @@
   background-color: #323232;
   color: #ffffff;
 }
+.left-footer {
+  display: flex;
+}
+.right-footer svg {
+  margin: 0px 20px;
+  font-size: 30px;
+}
+.left-footer-para p {
+  place-items: end;
+}
+.vertical-line {
+  margin: 5px 10px;
+  border: 1px solid white;
+}
+.para-cursor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.left-footer img,
+.para-cursor p,
+.right-footer svg {
+  cursor: pointer;
+}

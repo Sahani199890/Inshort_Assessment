@@ -6,19 +6,7 @@ import { RxCross1 } from "react-icons/rx";
 export default function Asidebar({ visibility, onClose }) {
   const location = useLocation();
   const navigate = useNavigate();
-
-  const lang = location.pathname.includes("/hi/") ? "hi" : "en";
-  const [selectedLanguage, setSelectedLanguage] = useState(lang);
-  const [cate, setCate] = useState("");
-
-  if (!visibility) return null;
-
-  const handleLanguageSelect = (language) => {
-    navigate(`/${language}/read/${cate}`);
-    setSelectedLanguage(language);
-  };
-
-  const categories = [
+  const categoriesEn = [
     "india",
     "business",
     "politics",
@@ -31,6 +19,36 @@ export default function Asidebar({ visibility, onClose }) {
     "automobile",
     "science",
   ];
+  const categoriesHi = [
+    "भारत",
+    "व्यापार",
+    "राजनीति",
+    "खेल",
+    "प्रौद्योगिकी",
+    "स्टार्टअप्स",
+    "मनोरंजन",
+    "अनोखा",
+    "अंतरराष्ट्रीय",
+    "ऑटोमोबाइल",
+    "विज्ञान",
+  ];
+
+  const lang = location.pathname.includes("/hi/") ? "hi" : "en";
+  const [selectedLanguage, setSelectedLanguage] = useState(lang);
+  const [cate, setCate] = useState("");
+  const [categories, setCategories] = useState(
+    lang == "hi" ? categoriesHi : categoriesEn
+  );
+
+  if (!visibility) return null;
+
+  const handleLanguageSelect = (language) => {
+    navigate(`/${language}/read/${cate}`);
+    language == "hi"
+      ? setCategories(categoriesHi)
+      : setCategories(categoriesEn);
+    setSelectedLanguage(language);
+  };
 
   return (
     <div className="container">

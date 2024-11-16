@@ -4,6 +4,7 @@ import formatDateTime from "../helper/Helper";
 import Header from "../header/Header";
 import Asidebar from "../asidebar/Asidebar";
 import Banner from "../banner/Banner";
+import Footer from "../footer/Footer";
 
 export default function NewsPage() {
   const [newsData, setNewsData] = useState([]);
@@ -46,7 +47,7 @@ export default function NewsPage() {
         <Header onMenuClick={toggleSidebar} />
       </div>
       <div className="asidebar-home-div">
-        <Asidebar visibility={visible} onClose={toggleSidebar} />
+        <Asidebar visibility={visible} toggleSidebar onClose={toggleSidebar} />
       </div>
       <div className="home-banner-component">
         <Banner />
@@ -97,7 +98,7 @@ export default function NewsPage() {
                 />
               </div>
               <div className="card-body">
-                <p className="card-text card-text-div-news">
+                <p className="card-text card-text-div-new">
                   {oneNews.title || "No title available"}
                 </p>
                 <p className="publish-p">
@@ -113,6 +114,7 @@ export default function NewsPage() {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

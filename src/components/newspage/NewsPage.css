@@ -64,6 +64,9 @@
   display: flex;
   justify-content: space-between;
 }
+.card-text-div-news {
+  cursor: pointer;
+}
 @media (min-width: 640px) {
   .homepage-card {
     flex-wrap: wrap;
