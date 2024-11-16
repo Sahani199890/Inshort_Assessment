@@ -1,0 +1,39 @@
+.asidebar-div {
+  background-color: #303036;
+  color: #ffffff;
+  position: relative;
+}
+.buttons-div {
+  padding: 20px;
+}
+.buttons-div {
+  text-align: center;
+}
+.language-button {
+  border: 1px solid rgb(128, 130, 144);
+  padding: 5px 20px;
+  color: #ffffff;
+}
+.language-button.active {
+  background-color: #808290;
+  color: #000;
+}
+
+.categories {
+  padding-top: 10px;
+}
+.categories a li {
+  padding: 10px;
+  cursor: pointer;
+  padding-left: 40px;
+}
+.categories a li:hover {
+  background-color: #44444d;
+}
+.close-btn {
+  position: absolute;
+  right: -80px;
+}
+.btn:focus {
+  box-shadow: none;
+}

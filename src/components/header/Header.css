@@ -1,0 +1,17 @@
+.header-div {
+  padding: 15px;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.more-span img {
+  width: 40px;
+}
+.logo-img-span {
+  position: absolute;
+  right: calc(100vw - 54%);
+  top: 15px;
+}
+.logo-img {
+  width: 110px;
+  height: 40px;
+}
